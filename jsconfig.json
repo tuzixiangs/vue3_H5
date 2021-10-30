@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "types": [
+      "vite/client"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "common/*": [
+        "./src/common/*"
+      ],
+      "components/*": [
+        "./src/components/*"
+      ],
+      "views/*": [
+        "./src/views/*"
+      ],
+      "utils/*": [
+        "./src/utils/*"
+      ],
+      "apis/*": [
+        "./src/apis/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist"
+  ]
+}

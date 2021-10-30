@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+}
+
+body {
+  font-family: "microsoft yahei",
+    'PingFang SC',
+    "Helvetica Neue",
+    Helvetica,
+    arial,
+    STHeiTi,
+    sans-serif;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none
+}
+
+ul,
+li {
+  list-style: none;
+}
