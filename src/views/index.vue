@@ -7,7 +7,6 @@
 <script setup>
   import { ref, computed } from 'vue'
   import { useStore } from 'vuex'
-  import { BASE_URL } from '@/common/config'
   const store = useStore()
   const count = computed(() => store.state.count)
 </script>
