@@ -1,9 +1,3 @@
-import { get, post, put, deletes } from '@/utils/request.sever'
+import * as home from './module/home'
 
-/**
- * @data 要传输的数据
- *
- **/
-export const login = data => {
-  return get(`/login`, data)
-}
+export { home }

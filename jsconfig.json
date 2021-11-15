@@ -25,6 +25,12 @@
       ],
       "apis/*": [
         "./src/apis/*"
+      ],
+      "store/*": [
+        "./src/store/*"
+      ],
+      "assets/*": [
+        "./src/assets/*"
       ]
     }
   },

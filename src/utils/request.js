@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { BASE_URL } from './config'
+import { BASE_URL } from 'common/config'
 
 const service = axios.create({
   // process.env.NODE_ENV === 'development' 来判断是否开发环境
@@ -8,24 +8,26 @@ const service = axios.create({
   timeout: 1000 * 30,
   headers: {
     'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/x-www-form-urlencoded'
+    'Content-Type': 'application/x-www-form-urlencoded',
     // 'Content-Type': 'application/json'
-  }
+  },
 })
 
 service.interceptors.request.use(
-  config => {
+  (config) => {
+    // 添加token
     config.headers['Authorization'] = localStorage.getItem('token') ?? ''
 
     return config
   },
-  error => {
+  (error) => {
     console.log(error)
     return Promise.reject()
-  }
+  },
 )
 service.interceptors.response.use(
-  response => {
+  (response) => {
+    // 根据项目实际需求修改
     if (response.status === 200) {
       if (response.data.code == 401) {
         localStorage.removeItem('token')
@@ -36,10 +38,10 @@ service.interceptors.response.use(
       Promise.reject()
     }
   },
-  error => {
+  (error) => {
     console.log(error)
     return Promise.reject()
-  }
+  },
 )
 
 export default service
