@@ -1,4 +1,4 @@
-####  项目使用 vue3/vite + [Vant3](https://vant-contrib.gitee.io/vant/v3/#/zh-CN/home "vant3") + scss
+####  项目使用 vue3/vite + [Vant3](https://vant-contrib.gitee.io/vant/v3/#/zh-CN/home "vant3") + scss + tailwind
 
 #### 添加依赖yarn / npm i    启动项目yarn run dev/npm run dev
 
