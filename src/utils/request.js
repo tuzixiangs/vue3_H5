@@ -2,8 +2,6 @@ import axios from 'axios'
 import { BASE_URL } from 'common/config'
 
 const service = axios.create({
-  // process.env.NODE_ENV === 'development' 来判断是否开发环境
-  // easy-mock服务挂了，暂时不使用了
   baseURL: BASE_URL,
   timeout: 1000 * 30,
   headers: {
@@ -29,10 +27,6 @@ service.interceptors.response.use(
   (response) => {
     // 根据项目实际需求修改
     if (response.status === 200) {
-      if (response.data.code == 401) {
-        localStorage.removeItem('token')
-        ElMessage.error('登录已过期,请关闭窗口重新进入')
-      }
       return response.data
     } else {
       Promise.reject()
